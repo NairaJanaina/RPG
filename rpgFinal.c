@@ -346,18 +346,23 @@ int main()
         printf("\n-------------Rolando os dados-------------\n");
        
             for (i = 0; i < 1; i++){
+                //pegando um número aleatório para servir de numero para o dado
                 numero =  rand() % 16;
                 printf("Seu numero é %d\n ", numero);
             }
+            //sempre que o dado der par
             if(numero%2 == 0){
                 printf("⚠Hit no ogro\n");
+                //diminuindo os pontos de vida
                 vidaogro--;
-            
+            //sempre que o dado der impar
             }else{
                 printf("Ops, você errou o hit e tomou dano\n");
+                  //diminuindo os pontos de vida
                 vidajogador --;
                 
             }
+            //se a vida de alhum dos dois zerar, este é o caminho
         }while (vidaogro>0 & vidajogador>0);
 
         if(vidaogro == 0){
